@@ -22,7 +22,7 @@ namespace NoSqlUploader.ViewModel
         public MainViewModel()
         {
             CouchBaseSettingViewModel = new CouchBaseSettingViewModel();
-            MongoDbSettingViewModel = new MongoDbSettingViewModel();
+            MongoDbSettingViewModel = new MongoDBSettingViewModel();
             LevelDbSettingViewModel = new LevelDbSettingViewModel();
             NoSqlSettings = new List<INoSql>() { CouchBaseSettingViewModel, MongoDbSettingViewModel, LevelDbSettingViewModel };
             SelectedNoSqlSetting = NoSqlSettings.FirstOrDefault();
@@ -43,7 +43,7 @@ namespace NoSqlUploader.ViewModel
 
         private string fileBaseDir;
         [System.ComponentModel.Category("上传文件设定")]
-        [PropertyTools.DataAnnotations.DisplayName("文件夹地址：")]
+        [PropertyTools.DataAnnotations.DisplayName("文件夹地址:")]
         [DirectoryPath]
         public string DirectoryPath
         {
@@ -59,7 +59,7 @@ namespace NoSqlUploader.ViewModel
             }
         }
         [PropertyTools.DataAnnotations.Browsable(false)]
-        MongoDbSettingViewModel MongoDbSettingViewModel { get; set; }
+        MongoDBSettingViewModel MongoDbSettingViewModel { get; set; }
         [PropertyTools.DataAnnotations.Browsable(false)]
         CouchBaseSettingViewModel CouchBaseSettingViewModel { get; set; }
         LevelDbSettingViewModel LevelDbSettingViewModel { get; set; }
@@ -275,7 +275,7 @@ namespace NoSqlUploader.ViewModel
                                             var d = DateTime.Now;
                                             var logpath =
                                                 $"error_log\\{d.Year}\\{d.Month}\\{d.Day}\\{d.Hour}_{d.Minute}";
-                                            Log(logpath, $"上传发生异常：{file.Name},[{e.Message}]\r\n{e.StackTrace}");
+                                            Log(logpath, $"上传发生异常:{file.Name},[{e.Message}]\r\n{e.StackTrace}");
                                         }
                                     }
                                     Info = "over";

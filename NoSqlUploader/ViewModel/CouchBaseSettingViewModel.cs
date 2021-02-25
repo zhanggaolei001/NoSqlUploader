@@ -46,8 +46,8 @@ namespace NoSqlUploader.ViewModel
         }
 
         private string url;
-        [System.ComponentModel.Category("NoSql连接设定")]
-        [PropertyTools.DataAnnotations.DisplayName("CouchBase地址：")]
+        [System.ComponentModel.Category("CouchBase连接设定")]
+        [PropertyTools.DataAnnotations.DisplayName("服务地址:")]
         [DataType(DataType.Url)]
         public string Url
         {
@@ -59,8 +59,8 @@ namespace NoSqlUploader.ViewModel
             }
         }
         private string bucketName;
-        [System.ComponentModel.Category("NoSql连接设定")]
-        [PropertyTools.DataAnnotations.DisplayName("Bucket名称：")]
+        [System.ComponentModel.Category("CouchBase连接设定")]
+        [PropertyTools.DataAnnotations.DisplayName("Bucket名称:")]
         public string BucketName
         {
             get { return bucketName; }
@@ -71,8 +71,8 @@ namespace NoSqlUploader.ViewModel
             }
         }
         private string userName;
-        [System.ComponentModel.Category("NoSql连接设定")]
-        [PropertyTools.DataAnnotations.DisplayName("用户名：")]
+        [System.ComponentModel.Category("CouchBase连接设定")]
+        [PropertyTools.DataAnnotations.DisplayName("用户名:")]
         public string UserName
         {
             get { return userName; }
@@ -83,8 +83,8 @@ namespace NoSqlUploader.ViewModel
             }
         }
         private string password;
-        [System.ComponentModel.Category("NoSql连接设定")]
-        [PropertyTools.DataAnnotations.DisplayName("密码：")]
+        [System.ComponentModel.Category("CouchBase连接设定")]
+        [PropertyTools.DataAnnotations.DisplayName("密码:")]
         [DataType(DataType.Password)]
         public string Password
         {

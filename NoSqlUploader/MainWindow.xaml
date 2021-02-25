@@ -10,7 +10,7 @@
         mc:Ignorable="d ignore"
         Height="640"
         Width="500"
-        Title="{Binding Left, StringFormat={}剩余项目：{0}}">
+        Title="{Binding Left, StringFormat={}剩余项目:{0}}">
   
     <Window.Resources>
         <ResourceDictionary>

@@ -17,8 +17,8 @@ namespace NoSqlUploader.ViewModel
         }
 
         private string baseDirPath;
-        [System.ComponentModel.Category("NoSql连接设定")]
-        [System.ComponentModel.DisplayName("LeveldbConnection路径")]
+        [System.ComponentModel.Category("LevelDb连接设定")]
+        [System.ComponentModel.DisplayName("文件夹路径:")]
         [DirectoryPath]
         public string DirectoryPath
         {

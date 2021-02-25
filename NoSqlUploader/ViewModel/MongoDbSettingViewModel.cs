@@ -13,15 +13,14 @@ namespace NoSqlUploader.ViewModel
         public string Key { get; set; }
         public byte[] Value { get; set; }
     }
-    public class MongoDbSettingViewModel : INotifyPropertyChanged, INoSql
+    public class MongoDBSettingViewModel : INotifyPropertyChanged, INoSql
     {
         private string url = @"mongodb://localhost";
         //  @"mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=false";
         private string dbName = "test";
 
-        [System.ComponentModel.Category("NoSql连接设定")]
-        [PropertyTools.DataAnnotations.DisplayName("MongoDb地址：")]
-        [DataType(DataType.Url)]
+        [System.ComponentModel.Category("MongoDB连接设定")]
+        [PropertyTools.DataAnnotations.DisplayName("服务地址:")] 
         public string Url
         {
             get { return url; }
@@ -35,8 +34,8 @@ namespace NoSqlUploader.ViewModel
         {
             return db.GetCollection<FileData>(name);  //传入集合的名字
         }
-        [System.ComponentModel.Category("NoSql连接设定")]
-        [PropertyTools.DataAnnotations.DisplayName("Db名称：")]
+        [System.ComponentModel.Category("MongoDB连接设定")]
+        [PropertyTools.DataAnnotations.DisplayName("Db名称:")]
         public string DbName
         {
             get { return dbName; }
@@ -89,11 +88,11 @@ namespace NoSqlUploader.ViewModel
         [PropertyTools.DataAnnotations.Browsable(false)]
         public bool Connected { get; set; }
 
-        [System.ComponentModel.Category("NoSql连接设定")]
-        [PropertyTools.DataAnnotations.DisplayName("Collection名称：")]
+        [System.ComponentModel.Category("MongoDB连接设定")]
+        [PropertyTools.DataAnnotations.DisplayName("Collection名称:")]
         public string CollectionName { get; set; } = "Files";
-        [System.ComponentModel.Category("NoSql连接设定")]
-        [PropertyTools.DataAnnotations.DisplayName("大文件模式：")]
+        [System.ComponentModel.Category("MongoDB连接设定")]
+        [PropertyTools.DataAnnotations.DisplayName("大文件模式:")]
         public bool BigFileMode { get; set; }
 
 
