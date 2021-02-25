@@ -16,6 +16,7 @@ namespace NoSqlUploader
         public MainWindow()
         {
             InitializeComponent(); 
+            this.DataContext=new MainViewModel();
         }
 
         private void TextBoxBase_OnTextChanged(object sender, TextChangedEventArgs e)
